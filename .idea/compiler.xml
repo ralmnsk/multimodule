@@ -7,10 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="multimodule.model" />
-        <module name="model" />
-        <module name="dao" />
+        <module name="hibernate" />
         <module name="web" />
+        <module name="model" />
+        <module name="multimodule.service" />
+        <module name="dao" />
+        <module name="multimodule.dao" />
         <module name="service" />
+        <module name="multimodule.web" />
       </profile>
     </annotationProcessing>
   </component>
