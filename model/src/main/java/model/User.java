@@ -10,6 +10,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="ID")
     private Long id;
 
 
@@ -20,7 +21,7 @@ public class User {
     @Column(name="PASS")
     private String pass;
 
-
+    @Temporal(TemporalType.DATE)
     @Column(name="JOIN_DATE")
     private Date joinDate;
 

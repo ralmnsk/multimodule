@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="web" />
-        <module name="jarMod" />
+        <module name="multimodule.model" />
         <module name="model" />
+        <module name="jarMod" />
+        <module name="web" />
       </profile>
     </annotationProcessing>
   </component>
