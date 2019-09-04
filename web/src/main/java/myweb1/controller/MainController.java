@@ -1,7 +1,6 @@
 package myweb1.controller;
 
-
-import model.User;
+import mymodel.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;

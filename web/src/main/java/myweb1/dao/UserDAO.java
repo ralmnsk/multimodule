@@ -1,7 +1,7 @@
 package myweb1.dao;
 
 
-import model.User;
+import mymodel.User;
 
 public interface UserDAO {
     User findByName(String name);

@@ -1,6 +1,6 @@
 package myweb1.service;
 
-import model.User;
+import mymodel.User;
 import myweb1.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

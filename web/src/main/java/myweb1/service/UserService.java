@@ -1,7 +1,7 @@
 package myweb1.service;
 
 
-import model.User;
+import mymodel.User;
 
 public interface UserService {
     User findByName(String name);

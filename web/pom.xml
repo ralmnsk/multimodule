@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>web</artifactId>
+    <artifactId>multimodule.web</artifactId>
     <packaging>war</packaging>
 
     <name>web Maven Webapp</name>
@@ -34,6 +34,11 @@
         <dependency>
             <groupId>mygroup</groupId>
             <artifactId>multimodule.model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mygroup</groupId>
+            <artifactId>multimodule.service</artifactId>
             <version>${project.version}</version>
         </dependency>
 

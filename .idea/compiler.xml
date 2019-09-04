@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="multimodule.model" />
         <module name="model" />
-        <module name="jarMod" />
         <module name="web" />
+        <module name="service" />
       </profile>
     </annotationProcessing>
   </component>
