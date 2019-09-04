@@ -1,7 +1,6 @@
-package myweb1.dao;
+package myapp;
 
 
-import mymodel.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

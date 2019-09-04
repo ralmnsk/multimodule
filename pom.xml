@@ -12,6 +12,7 @@
         <module>service</module>
         <module>web</module>
         <module>model</module>
+        <module>dao</module>
     </modules>
 
     <name>multimodule</name>

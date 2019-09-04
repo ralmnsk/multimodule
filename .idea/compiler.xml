@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="multimodule.model" />
         <module name="model" />
+        <module name="dao" />
         <module name="web" />
         <module name="service" />
       </profile>

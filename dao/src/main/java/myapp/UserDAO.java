@@ -1,9 +1,7 @@
-package myweb1.service;
+package myapp;
 
 
-import mymodel.User;
-
-public interface UserService {
+public interface UserDAO {
     User findByName(String name);
     void saveUser(User user);
     void deleteUser(User user);

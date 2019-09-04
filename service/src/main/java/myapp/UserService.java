@@ -1,9 +1,7 @@
-package myweb1.dao;
+package myapp;
 
 
-import mymodel.User;
-
-public interface UserDAO {
+public interface UserService {
     User findByName(String name);
     void saveUser(User user);
     void deleteUser(User user);
