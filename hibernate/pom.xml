@@ -33,11 +33,7 @@
             <artifactId>multimodule.model</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>mygroup</groupId>
-            <artifactId>multimodule.service</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
     </dependencies>
 
     <build>

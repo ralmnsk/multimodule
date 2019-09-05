@@ -1,17 +1,20 @@
 package myapp;
 
 
+import mygroup.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository
+@Repository("userDAO")
 public class UserDAOImpl implements UserDAO {
 
-   @Autowired
-    private SessionFactory sessionFactory;
+   //@Autowired
+    private SessionFactory sessionFactory=HibernateUtil.getSessionfactory();
+
 
     private Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
@@ -29,7 +32,11 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public void saveUser(User user) {
-        getCurrentSession().save(user);
+
+        Session session=getCurrentSession();
+        Transaction transaction=session.beginTransaction();
+                session.save(user);
+                transaction.commit();
     }
 
     @Override

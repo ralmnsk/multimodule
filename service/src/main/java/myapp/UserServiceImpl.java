@@ -8,8 +8,9 @@ import javax.transaction.Transactional;
 @Service("userService")
 @Transactional
 public class UserServiceImpl implements UserService {
-    @Autowired
-    private UserDAO userDAO;
+
+    //@Autowired
+    private UserDAO userDAO=new UserDAOImpl();
 
     @Override
     public User findByName(String name) {
