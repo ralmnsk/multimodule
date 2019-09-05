@@ -7,9 +7,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-@Repository("userDAO")
+@Component("userDAO")
 public class UserDAOImpl implements UserDAO {
 
    //@Autowired
