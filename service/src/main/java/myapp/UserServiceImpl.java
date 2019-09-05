@@ -1,7 +1,9 @@
 package myapp;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -12,15 +14,8 @@ import javax.transaction.Transactional;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    @Qualifier("userDAO")
-//    @Lazy
-    private UserDAO userDAO; //=new UserDAOImpl();
-
-//
-//    public void setUserDAO(UserDAO userDAO) {
-//        this.userDAO = userDAO;
-//    }
+    //@Autowired
+    private UserDAO userDAO=new UserDAOImpl();
 
     @Override
     public User findByName(String name) {

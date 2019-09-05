@@ -7,14 +7,17 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 
-@Component("userDAO")
+
 public class UserDAOImpl implements UserDAO {
 
    //@Autowired
-    private SessionFactory sessionFactory=HibernateUtil.getSessionfactory();
+    private SessionFactory sessionFactory=(SessionFactory)
+           new AnnotationConfigApplicationContext(UserDAOConfiguration.class)
+           .getBean("sessionFactoryOne");//= HibernateUtil.getSessionfactory();
 
 
     private Session getCurrentSession() {
