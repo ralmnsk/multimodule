@@ -1,5 +1,6 @@
 package myweb1.conf;
 
+import hiber.HibernateConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
@@ -8,7 +9,7 @@ public class WebInitializer
         {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return null;
+        return new Class[]{HibernateConfiguration.class};
     }
 
     @Override

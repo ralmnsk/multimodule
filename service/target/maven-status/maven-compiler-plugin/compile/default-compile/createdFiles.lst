@@ -1,2 +1,2 @@
-myapp\UserService.class
-myapp\UserServiceImpl.class
+service\UserServiceImpl.class
+service\UserService.class

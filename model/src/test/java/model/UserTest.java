@@ -1,6 +1,5 @@
 package model;
 
-import myapp.User;
 import org.junit.Test;
 
 import java.util.Date;

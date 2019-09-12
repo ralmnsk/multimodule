@@ -1,21 +1,23 @@
-package myapp;
+package service;
 
-import org.hibernate.SessionFactory;
+import dao.UserDAO;
+import model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 
-@Component("userService")
+@Service
 @Transactional
 public class UserServiceImpl implements UserService {
 
-    //@Autowired
-    private UserDAO userDAO=new UserDAOImpl();
+
+    private UserDAO userDAO;
+
+    @Autowired
+    public void setUserDAO(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 
     @Override
     public User findByName(String name) {

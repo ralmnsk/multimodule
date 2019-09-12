@@ -1,24 +1,28 @@
-package myapp;
+package dao;
 
 
-import mygroup.HibernateUtil;
+import model.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
+import javax.transaction.Transactional;
 
+@Repository
+@Transactional
 public class UserDAOImpl implements UserDAO {
 
-   //@Autowired
-    private SessionFactory sessionFactory=(SessionFactory)
-           new AnnotationConfigApplicationContext(UserDAOConfiguration.class)
-           .getBean("sessionFactoryOne");//= HibernateUtil.getSessionfactory();
+    @Resource(name = "sessionFactory")
+    private SessionFactory sessionFactory;
 
+    @Autowired
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     private Session getCurrentSession() {
         return sessionFactory.getCurrentSession();
