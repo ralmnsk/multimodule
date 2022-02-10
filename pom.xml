@@ -24,7 +24,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <hibernate.version>5.0.1.Final</hibernate.version>
+    <hibernate.version>5.4.24.Final</hibernate.version>
     <springframework.version>5.1.8.RELEASE</springframework.version>
     <mysql.connector.version>5.0.4</mysql.connector.version>
     <guava.version>18.0</guava.version>
